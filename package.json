@@ -1,0 +1,38 @@
+{
+  "name": "stdvba-docs",
+  "version": "1.0.0",
+  "description": "Documentation for stdVBA",
+  "main": "public/dist/index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/index.css",
+    "build:js": "esbuild src/index.tsx --bundle --outfile=dist/index.js --minify --sourcemap",
+    "build": "npm run build:css && npm run build:js",
+    "dev:css": "tailwindcss -i ./src/index.css -o ./dist/index.css --watch",
+    "dev:js": "esbuild src/index.tsx --bundle --outfile=dist/index.js --sourcemap --serve --servedir=.",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:js\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^29.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.19.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.0.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  }
+}

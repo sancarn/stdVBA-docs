@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+code {
+    background-color: #23272e;
+    color: #a6e22e;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    font-size: 0.95em;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', monospace;
+    font-weight: 500;
+}
+
+pre code {
+    display: block;
+    background-color: #282c34;
+    color: #a6e22e;
+    padding: 1em 1.2em;
+    border-radius: 0.4em;
+    font-size: 1em;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', monospace;
+    font-weight: 500;
+    overflow-x: auto;
+    box-shadow: 0 2px 16px 0 #00000033;
+    margin: 0.5em 0;
+}
+
+/* Markdown table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    background-color: #23272e;
+    color: #e5e7eb;
+    border-radius: 0.4em;
+    overflow: hidden;
+    font-size: 0.98em;
+}
+th, td {
+    padding: 0.6em 1em;
+    border: 1px solid #374151;
+}
+th {
+    background-color: #1f2937;
+    color: #93c5fd;
+    font-weight: 600;
+    text-align: left;
+}
+tr:nth-child(even) td {
+    background-color: #1a1d23;
+}
+
